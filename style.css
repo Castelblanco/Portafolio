@@ -287,6 +287,10 @@ main{
     margin-bottom: 20px;
 }
 
+.zoom_project a:hover{
+    border-bottom: 3px solid #fff;
+}
+
 /* Contacts */
 
 #contacts{

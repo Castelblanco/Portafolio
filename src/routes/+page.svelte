@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from '@atoms/button.svelte';
 	import H1 from '@atoms/h1.svelte';
+	import H2 from '@atoms/h2.svelte';
 	import Text from '@atoms/text.svelte';
 	import Space from '@atoms/space.svelte';
 	import { Box, Center, Flex, Stack } from '@svelteuidev/core';
@@ -61,6 +62,8 @@
 			<Flex direction="column" align="center">
 				<H1>Esteban Castelblanco</H1>
 				<Space h="sm" />
+				<H2>Full Stack Developer</H2>
+				<Space h="sm" />
 				<Text>Don't program to solve problems, program to create solutions: Lucas Dalto.</Text>
 				<Space h="xl" />
 				<Flex style="width: 100%;" justify="center" direction="row">
@@ -74,3 +77,8 @@
 		</Center>
 	</Box>
 </Box>
+
+<svelte:head>
+	<title>Esteban Castelblanco</title>
+	<meta name="content" content="Full Stack Developer Javascript" />
+</svelte:head>

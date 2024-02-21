@@ -4,29 +4,10 @@
 	import H2 from '@atoms/h2.svelte';
 	import Text from '@atoms/text.svelte';
 	import Space from '@atoms/space.svelte';
-	import { Box, Center, Flex, Stack } from '@svelteuidev/core';
+	import { Box, Center, Flex } from '@svelteuidev/core';
 	import type { LayoutRouteId } from './$types';
 	import { goto } from '$app/navigation';
-
-	type TBtn = {
-		label: string;
-		uri: LayoutRouteId;
-	};
-
-	const btnList: TBtn[] = [
-		{
-			label: 'Skills',
-			uri: '/skills'
-		},
-		{
-			label: 'Projects',
-			uri: '/projects'
-		},
-		{
-			label: 'Experience',
-			uri: '/experience'
-		}
-	];
+	import { btnListRoutes } from 'constants/routes';
 
 	const handleGoRoute = (uri: LayoutRouteId) => {
 		goto(uri as string);
@@ -38,7 +19,7 @@
 		style="
             width: 100vw;
             height: 100vh;
-            background: url(/code.webp);
+            background: url(/code.png);
             background-repeat: repeat;
             background-size: cover;
             background-position: center;
@@ -67,7 +48,7 @@
 				<Text>Don't program to solve problems, program to create solutions: Lucas Dalto.</Text>
 				<Space h="xl" />
 				<Flex style="width: 100%;" justify="center" direction="row">
-					{#each btnList as { label, uri }}
+					{#each btnListRoutes as { label, uri }}
 						<Button color="cyan" fullSize variant="outline" on:click={() => handleGoRoute(uri)}
 							>{label}</Button
 						>

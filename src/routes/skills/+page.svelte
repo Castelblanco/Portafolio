@@ -4,6 +4,8 @@
 	import Image from '@atoms/image.svelte';
 	import Space from '@atoms/space.svelte';
 	import Text from '@atoms/text.svelte';
+	import IconTitleDarkLight from '@molecules/icon-title-dark-light.svelte';
+	import IconTitle from '@molecules/icon-title.svelte';
 	import { Box, Center, Flex, SimpleGrid } from '@svelteuidev/core';
 
 	type TIcon = {
@@ -14,15 +16,150 @@
 	const iconsFrontList: TIcon[] = [
 		{
 			label: 'HTML',
-			src: 'express-black.png'
+			src: 'html'
 		},
 		{
 			label: 'CSS',
-			src: 'socketio.png'
+			src: 'css'
 		},
 		{
 			label: 'Javascript',
-			src: 'sequelize-black.png'
+			src: 'js'
+		},
+		{
+			label: 'Typescript',
+			src: 'ts'
+		},
+		{
+			label: 'JQuery',
+			src: 'jquery'
+		},
+		{
+			label: 'PhaserJs',
+			src: 'phaser'
+		},
+		{
+			label: 'Angular',
+			src: 'angular'
+		},
+		{
+			label: 'React',
+			src: 'react'
+		},
+		{
+			label: 'Vue',
+			src: 'vue'
+		},
+		{
+			label: 'Nuxt',
+			src: 'nuxt'
+		},
+		{
+			label: 'Svelte',
+			src: 'svelte'
+		},
+		{
+			label: 'SvelteKit',
+			src: 'svelte'
+		},
+		{
+			label: 'Material UI',
+			src: 'material-ui'
+		},
+		{
+			label: 'Expo',
+			src: 'expo'
+		},
+		{
+			label: 'Vite',
+			src: 'vite'
+		},
+		{
+			label: 'Firebase',
+			src: 'firebase'
+		},
+		{
+			label: 'Git',
+			src: 'git'
+		}
+	];
+
+	const iconsBackColortList: TIcon[] = [
+		{
+			label: 'BunJs',
+			src: 'bun'
+		},
+		{
+			label: 'ElysiaJs',
+			src: 'elysia'
+		}
+	];
+
+	const iconsBacktList: TIcon[] = [
+		{
+			label: 'NodeJs',
+			src: 'node'
+		},
+		{
+			label: 'ExpressJs',
+			src: 'express'
+		},
+		{
+			label: 'NestJs',
+			src: 'nest'
+		},
+		{
+			label: 'Socket.io',
+			src: 'socketio'
+		},
+		{
+			label: 'Json Web Token',
+			src: 'jwt'
+		},
+		{
+			label: 'GraphQL',
+			src: 'graphql'
+		},
+		{
+			label: 'MongoDB',
+			src: 'mongo'
+		},
+		{
+			label: 'Mongoose',
+			src: 'mongoose'
+		},
+		{
+			label: 'Postgres',
+			src: 'postgres'
+		},
+		{
+			label: 'MySql',
+			src: 'my-sql'
+		},
+		{
+			label: 'Sequelize',
+			src: 'sequelize'
+		},
+		{
+			label: 'TypeORM',
+			src: 'typeorm'
+		},
+		{
+			label: 'Prisma',
+			src: 'prisma'
+		},
+
+		{
+			label: 'Python',
+			src: 'python'
+		},
+		{
+			label: 'Flask',
+			src: 'flask'
+		},
+		{
+			label: 'Docker',
+			src: 'docker'
 		}
 	];
 </script>
@@ -34,7 +171,7 @@
 		<H1>Skills</H1>
 		<Space h="xl" />
 
-		<Box style="border: 10px solid #f9e; width: 90%; max-width: 900px;">
+		<Box style="width: 90%; max-width: 900px;">
 			<Center>
 				<Flex align="center" direction="column" style="width: 100%;">
 					<H2>Front-End</H2>
@@ -42,31 +179,40 @@
 
 					<SimpleGrid
 						style="
-                            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-                            grid-auto-rows: 100px;
+                            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                            grid-auto-rows: 140px;
                             width: 100%;
-                            height: 400px;
                         "
 					>
 						{#each iconsFrontList as { src, label }}
-							<Box
-								style="
-                                    text-align: center;
-                                "
-							>
-								<Image width="100px" {src} alt={label} />
-								<Text align="center">{label}</Text>
-							</Box>
+							<IconTitleDarkLight {src} {label} />
 						{/each}
 					</SimpleGrid>
+
+					<Space h="xl" />
 					<H2>Back-End</H2>
+					<Space h="xl" />
+
+					<SimpleGrid
+						style="
+                            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                            grid-auto-rows: 140px;
+                            width: 100%;
+                        "
+					>
+						{#each iconsBackColortList as { src, label }}
+							<IconTitle {src} {label} />
+						{/each}
+
+						{#each iconsBacktList as { src, label }}
+							<IconTitleDarkLight {src} {label} />
+						{/each}
+					</SimpleGrid>
 				</Flex>
 			</Center>
 		</Box>
 	</Flex>
 </Center>
-<p>skills</p>
-<Image src="/js-black.png" width="100px" />
 
 <svelte:head>
 	<title>Skills</title>

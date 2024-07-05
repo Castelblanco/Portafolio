@@ -1,9 +1,7 @@
 <script lang="ts">
 	import H1 from '@atoms/h1.svelte';
 	import H2 from '@atoms/h2.svelte';
-	import Image from '@atoms/image.svelte';
 	import Space from '@atoms/space.svelte';
-	import Text from '@atoms/text.svelte';
 	import IconTitleDarkLight from '@molecules/icon-title-dark-light.svelte';
 	import IconTitle from '@molecules/icon-title.svelte';
 	import { Box, Center, Flex, SimpleGrid } from '@svelteuidev/core';
@@ -73,6 +71,14 @@
 		{
 			label: 'Vite',
 			src: 'vite'
+		},
+		{
+			label: 'Tauri',
+			src: 'tauri'
+		},
+		{
+			label: 'Electron',
+			src: 'electron'
 		},
 		{
 			label: 'Firebase',
@@ -170,6 +176,7 @@
 		<Space h="xl" />
 		<H1>Skills</H1>
 		<Space h="xl" />
+		<Space h="xl" />
 
 		<Box style="width: 90%; max-width: 900px;">
 			<Center>
@@ -189,6 +196,7 @@
 						{/each}
 					</SimpleGrid>
 
+					<Space h="xl" />
 					<Space h="xl" />
 					<H2>Back-End</H2>
 					<Space h="xl" />

@@ -5,7 +5,7 @@
 
 	export let data;
 
-	$: widthView = innerWidth;
+	$: widthView = window.innerWidth;
 </script>
 
 <SvelteUIProvider withGlobalStyles themeObserver="dark">

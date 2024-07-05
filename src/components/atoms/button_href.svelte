@@ -6,6 +6,7 @@
 		type SvelteUIGradient,
 		type SvelteUINumberSize
 	} from '@svelteuidev/core';
+	import type { LayoutRouteId } from '../../routes/$types';
 
 	export let color: (SvelteUIColor & string) | undefined = undefined;
 	export let variant: ButtonVariant | undefined = undefined;
@@ -14,11 +15,12 @@
 	export let radius: number | SvelteUINumberSize | undefined = undefined;
 	export let size: SvelteUINumberSize | undefined = undefined;
 	export let style = '';
+	export let href: LayoutRouteId;
 	export let gradient: SvelteUIGradient | undefined = undefined;
 </script>
 
 <Button
-	{style}
+	override={style}
 	{gradient}
 	{color}
 	{variant}
@@ -26,7 +28,7 @@
 	{compact}
 	{radius}
 	{size}
-	on:click
+	{href}
 	ripple
 >
 	<slot />

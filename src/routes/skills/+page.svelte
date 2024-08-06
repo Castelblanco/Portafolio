@@ -1,9 +1,8 @@
 <script lang="ts">
-	import H1 from '@atoms/h1.svelte';
-	import H2 from '@atoms/h2.svelte';
-	import Space from '@atoms/space.svelte';
-	import IconTitleDarkLight from '@molecules/icon-title-dark-light.svelte';
-	import IconTitle from '@molecules/icon-title.svelte';
+	import H1 from '$atoms/h1.svelte';
+	import H2 from '$atoms/h2.svelte';
+	import Space from '$atoms/space.svelte';
+	import IconTitleDarkLight from '$molecules/icon-title-dark-light.svelte';
 	import { Box, Center, Flex, SimpleGrid } from '@svelteuidev/core';
 
 	type TIcon = {
@@ -90,7 +89,7 @@
 		}
 	];
 
-	const iconsBackColortList: TIcon[] = [
+	const iconsBacktList: TIcon[] = [
 		{
 			label: 'BunJs',
 			src: 'bun'
@@ -98,10 +97,7 @@
 		{
 			label: 'ElysiaJs',
 			src: 'elysia'
-		}
-	];
-
-	const iconsBacktList: TIcon[] = [
+		},
 		{
 			label: 'NodeJs',
 			src: 'node'
@@ -208,10 +204,6 @@
                             width: 100%;
                         "
 					>
-						{#each iconsBackColortList as { src, label }}
-							<IconTitle {src} {label} />
-						{/each}
-
 						{#each iconsBacktList as { src, label }}
 							<IconTitleDarkLight {src} {label} />
 						{/each}

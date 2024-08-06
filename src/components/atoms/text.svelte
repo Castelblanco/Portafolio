@@ -7,6 +7,3 @@
 <Text {...$$props}>
 	<slot />
 </Text>
-
-<style>
-</style>

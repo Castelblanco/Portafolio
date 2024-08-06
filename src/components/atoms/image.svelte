@@ -9,4 +9,4 @@
 	export let usePlaceholder = false;
 </script>
 
-<Image {width} {height} on:click override={style} {src} {alt} {usePlaceholder} />
+<Image {width} {height} on:click {style} {src} {alt} {usePlaceholder} />

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Button from '@atoms/button.svelte';
-	import H1 from '@atoms/h1.svelte';
-	import H2 from '@atoms/h2.svelte';
-	import Text from '@atoms/text.svelte';
-	import Space from '@atoms/space.svelte';
+	import Button from '$atoms/button.svelte';
+	import H1 from '$atoms/h1.svelte';
+	import H2 from '$atoms/h2.svelte';
+	import Text from '$atoms/text.svelte';
+	import Space from '$atoms/space.svelte';
 	import { Box, Center, Flex } from '@svelteuidev/core';
 	import type { LayoutRouteId } from './$types';
 	import { goto } from '$app/navigation';
@@ -45,12 +45,17 @@
 				<Space h="sm" />
 				<H2>Full Stack Developer</H2>
 				<Space h="sm" />
-				<Text>Don't program to solve problems, program to create solutions: Lucas Dalto.</Text>
+				<Text
+					>Don't program to solve problems, program to create solutions: Lucas Dalto.</Text
+				>
 				<Space h="xl" />
 				<Flex style="width: 100%;" justify="center" direction="row">
 					{#each btnListRoutes as { label, uri }}
-						<Button color="cyan" fullSize variant="outline" on:click={() => handleGoRoute(uri)}
-							>{label}</Button
+						<Button
+							color="cyan"
+							fullSize
+							variant="outline"
+							on:click={() => handleGoRoute(uri)}>{label}</Button
 						>
 					{/each}
 				</Flex>

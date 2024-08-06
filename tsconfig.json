@@ -10,12 +10,7 @@
 		"sourceMap": true,
 		"strict": true,
 		"moduleResolution": "bundler",
-		"baseUrl": "./src",
-		"paths": {
-			"@atoms/*": ["components/atoms/*"],
-			"@molecules/*": ["components/molecules/*"],
-			"@templates/*": ["components/templates/*"]
-		}
+		"baseUrl": "./src"
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

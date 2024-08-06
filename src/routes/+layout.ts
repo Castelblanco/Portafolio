@@ -2,8 +2,8 @@ import type { LayoutLoad } from './$types';
 
 export const ssr = false;
 
-export const load: LayoutLoad = ({ url }) => {
+export const load: LayoutLoad = ({ route }) => {
 	return {
-		url: url.pathname
+		url: route.id
 	};
 };

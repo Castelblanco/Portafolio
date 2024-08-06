@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Image from '@atoms/image.svelte';
-	import Space from '@atoms/space.svelte';
-	import Text from '@atoms/text.svelte';
+	import Image from '$atoms/image.svelte';
+	import Space from '$atoms/space.svelte';
+	import Text from '$atoms/text.svelte';
 	import { Flex } from '@svelteuidev/core';
 
 	export let src: string;

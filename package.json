@@ -11,7 +11,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"deploy": "bun run check && bun run build"
+		"deploy": "bun run check && bun run build && bunx firebase deploy"
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "2.5.28",
@@ -38,6 +38,7 @@
 		"@svelteuidev/core": "0.15.7",
 		"axios": "1.7.7",
 		"cheerio": "1.0.0",
+		"firebase-tools": "13.19.0",
 		"radix-icons-svelte": "1.2.1",
 		"svelte-typewriter": "3.2.3"
 	},

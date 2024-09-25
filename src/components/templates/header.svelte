@@ -27,6 +27,7 @@
 			position: fixed;
 			top: 50%;
 			left: calc(100% - {show ? 80 : 50}px);
+			z-index: 100000000;
 		"
 >
 	<Burger opened={show} on:click={toggleShow} color="#fff" size={30} />

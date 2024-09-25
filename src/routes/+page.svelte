@@ -7,7 +7,7 @@
 	import { Box, Center, Flex } from '@svelteuidev/core';
 	import type { LayoutRouteId } from './$types';
 	import { goto } from '$app/navigation';
-	import { btnListRoutes } from 'constants/routes';
+	import { btnListRoutes } from '$constants/routes';
 
 	const handleGoRoute = (uri: LayoutRouteId) => {
 		goto(uri as string);

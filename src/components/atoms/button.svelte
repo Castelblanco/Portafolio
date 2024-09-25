@@ -17,17 +17,6 @@
 	export let gradient: SvelteUIGradient | undefined = undefined;
 </script>
 
-<Button
-	{style}
-	{gradient}
-	{color}
-	{variant}
-	{fullSize}
-	{compact}
-	{radius}
-	{size}
-	on:click
-	ripple
->
+<Button {style} {gradient} {color} {variant} {fullSize} {compact} {radius} {size} on:click ripple>
 	<slot />
 </Button>

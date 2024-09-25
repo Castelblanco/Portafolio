@@ -11,11 +11,11 @@ export const btnListRoutes: TBtnRoute[] = [
 		uri: '/skills'
 	},
 	{
-		label: 'Projects',
-		uri: '/projects'
-	},
-	{
 		label: 'Experience',
 		uri: '/experience'
+	},
+	{
+		label: 'Contact',
+		uri: '/contact'
 	}
 ];

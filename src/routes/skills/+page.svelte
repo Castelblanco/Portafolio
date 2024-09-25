@@ -4,166 +4,8 @@
 	import Space from '$atoms/space.svelte';
 	import IconTitleDarkLight from '$molecules/icon-title-dark-light.svelte';
 	import { Box, Center, Flex, SimpleGrid } from '@svelteuidev/core';
-
-	type TIcon = {
-		label: string;
-		src: string;
-	};
-
-	const iconsFrontList: TIcon[] = [
-		{
-			label: 'HTML',
-			src: 'html'
-		},
-		{
-			label: 'CSS',
-			src: 'css'
-		},
-		{
-			label: 'Javascript',
-			src: 'js'
-		},
-		{
-			label: 'Typescript',
-			src: 'ts'
-		},
-		{
-			label: 'JQuery',
-			src: 'jquery'
-		},
-		{
-			label: 'PhaserJs',
-			src: 'phaser'
-		},
-		{
-			label: 'Angular',
-			src: 'angular'
-		},
-		{
-			label: 'React',
-			src: 'react'
-		},
-		{
-			label: 'Vue',
-			src: 'vue'
-		},
-		{
-			label: 'Nuxt',
-			src: 'nuxt'
-		},
-		{
-			label: 'Svelte',
-			src: 'svelte'
-		},
-		{
-			label: 'SvelteKit',
-			src: 'svelte'
-		},
-		{
-			label: 'Material UI',
-			src: 'material-ui'
-		},
-		{
-			label: 'Expo',
-			src: 'expo'
-		},
-		{
-			label: 'Vite',
-			src: 'vite'
-		},
-		{
-			label: 'Tauri',
-			src: 'tauri'
-		},
-		{
-			label: 'Electron',
-			src: 'electron'
-		},
-		{
-			label: 'Firebase',
-			src: 'firebase'
-		},
-		{
-			label: 'Git',
-			src: 'git'
-		}
-	];
-
-	const iconsBacktList: TIcon[] = [
-		{
-			label: 'BunJs',
-			src: 'bun'
-		},
-		{
-			label: 'ElysiaJs',
-			src: 'elysia'
-		},
-		{
-			label: 'NodeJs',
-			src: 'node'
-		},
-		{
-			label: 'ExpressJs',
-			src: 'express'
-		},
-		{
-			label: 'NestJs',
-			src: 'nest'
-		},
-		{
-			label: 'Socket.io',
-			src: 'socketio'
-		},
-		{
-			label: 'Json Web Token',
-			src: 'jwt'
-		},
-		{
-			label: 'GraphQL',
-			src: 'graphql'
-		},
-		{
-			label: 'MongoDB',
-			src: 'mongo'
-		},
-		{
-			label: 'Mongoose',
-			src: 'mongoose'
-		},
-		{
-			label: 'Postgres',
-			src: 'postgres'
-		},
-		{
-			label: 'MySql',
-			src: 'my-sql'
-		},
-		{
-			label: 'Sequelize',
-			src: 'sequelize'
-		},
-		{
-			label: 'TypeORM',
-			src: 'typeorm'
-		},
-		{
-			label: 'Prisma',
-			src: 'prisma'
-		},
-
-		{
-			label: 'Python',
-			src: 'python'
-		},
-		{
-			label: 'Flask',
-			src: 'flask'
-		},
-		{
-			label: 'Docker',
-			src: 'docker'
-		}
-	];
+	import { technologiesBackend } from 'services/technologies/backend';
+	import { technologiesFrontend } from 'services/technologies/frontend';
 </script>
 
 <Center>
@@ -187,8 +29,8 @@
                             width: 100%;
                         "
 					>
-						{#each iconsFrontList as { src, label }}
-							<IconTitleDarkLight {src} {label} />
+						{#each technologiesFrontend as { icon, label }}
+							<IconTitleDarkLight src={icon} {label} />
 						{/each}
 					</SimpleGrid>
 
@@ -204,8 +46,8 @@
                             width: 100%;
                         "
 					>
-						{#each iconsBacktList as { src, label }}
-							<IconTitleDarkLight {src} {label} />
+						{#each technologiesBackend as { icon, label }}
+							<IconTitleDarkLight src={icon} {label} />
 						{/each}
 					</SimpleGrid>
 				</Flex>

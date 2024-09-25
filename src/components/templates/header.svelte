@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { Header, Navbar, ActionIcon, Box, Tooltip, Burger } from '@svelteuidev/core';
-	import { HamburgerMenu, CaretRight } from 'radix-icons-svelte';
-	import { btnListRoutes } from 'constants/routes';
+	import { Header, Navbar, Box, Tooltip, Burger } from '@svelteuidev/core';
+	import { btnListRoutes } from '$constants/routes';
 	import { fly } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 	import type { LayoutRouteId } from '../../routes/$types';

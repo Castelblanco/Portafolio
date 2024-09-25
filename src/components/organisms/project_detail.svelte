@@ -1,6 +1,5 @@
 <script lang="ts">
 	import H2 from '$atoms/h2.svelte';
-	import Space from '$atoms/space.svelte';
 	import Text from '$atoms/text.svelte';
 	import { Box, Flex } from '@svelteuidev/core';
 	import IconTooltip from '$molecules/icon_tooltip.svelte';
@@ -8,15 +7,18 @@
 	import { concurrent } from 'svelte-typewriter';
 	import Carrousel from './carrousel.svelte';
 	import ButtonHref from 'components/atoms/button_href.svelte';
+	import Space from 'components/atoms/space.svelte';
 
 	export let project: TProject;
 </script>
 
 <Flex align="center" direction="column" style="width: 100%;">
 	<H2>{project.title}</H2>
-	<Space h="xl" />
-	<Carrousel images={project.images} />
-	<Space h="xl" />
+	{#if project.images.length > 0}
+		<Carrousel images={project.images} />
+	{:else}
+		<Space h="xl" />
+	{/if}
 	<p use:concurrent={{ cursor: true }} style="text-wrap: pretty; text-align: center;">
 		{project.description}
 	</p>
@@ -40,7 +42,7 @@
 					{label}
 				</ButtonHref>
 			{:else}
-				<Text style="margin-top: 10px;">Nothing</Text>
+				<Text style="margin-top: 10px;">Private</Text>
 			{/each}
 		</Box>
 	</Flex>

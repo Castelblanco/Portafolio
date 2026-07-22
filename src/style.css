@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-space-950: #07070d;
+    --color-space-900: #0a0a14;
+    --color-space-800: #12121f;
+    --color-star-cyan: #06b6d4;
+    --color-star-gold: #f59e0b;
+    --color-star-purple: #a855f7;
+    --color-star-pink: #ec4899;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--color-space-950);
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-space-950);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+/* Iconos con fill oscuro — forzar blanco */
+.devicon-nextjs-plain.colored,
+.devicon-socketio-original.colored,
+.devicon-flask-original.colored,
+.devicon-express-original.colored,
+.devicon-prisma-original.colored {
+    color: #e2e8f0 !important;
+}

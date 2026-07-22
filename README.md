@@ -1,38 +1,40 @@
-# create-svelte
+# Portafolio — Castelblanco
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Portfolio personal con temática de sistema solar, construido como SPA con Vue 3 + Three.js.
 
-## Creating a project
+## Stack
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Framework:** Vue 3.5 (Composition API + `<script setup>`)
+- **3D:** Three.js + TresJS + Cientos
+- **Build:** Vite 8 + TypeScript 6 + vue-tsc
+- **Styling:** Tailwind CSS v4 + devicon icons
+- **Animations:** GSAP + Lenis (smooth scroll)
+- **Post-processing:** UnrealBloomPass
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Secciones
 
-# create a new project in my-app
-npm create svelte@latest my-app
+- **Hero** — nombre con gradiente, scroll bounce indicator
+- **Skills** — 35 tecnologías en 4 categorías (Frontend, Backend, Database, DevOps)
+- **Experience** — línea de tiempo con 4 proyectos formato CAR (Contexto/Acción/Resultado)
+- **Contact** — enlaces a LinkedIn, GitHub, Email
+
+## Escena 3D
+
+6 sistemas que responden al scroll y mouse parallax:
+
+| Sistema | Descripción |
+|---------|-------------|
+| Starfield | 3000 partículas de fondo |
+| CentralStar | Sol con textura procedural fbm + wireframe + glow + partículas orbitales |
+| OrbitalRings | 2 anillos concéntricos con esferas rotando |
+| Constellation | 5 nodos conectados con puntos de flujo animados |
+| NebulaContact | 600 partículas de colores en sección contacto |
+| BloomEffect | Post-processing glow global |
+
+## Desarrollo
+
+```sh
+bun i
+bun --bun dev  # localhost:5173
+bun run build  # type-check + build
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
